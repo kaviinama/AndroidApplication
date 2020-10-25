@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainFragment"
+    tools:context=".MainFragment">
+
+    <!-- Main Fragments elements  -->
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="fill_parent"
+        android:background="@color/background"
+        android:src="@drawable/camera_black"
+        android:layout_height="@dimen/layout_zero"
+        android:layout_weight="@dimen/layout_50_weight"/>
+
+    <ProgressBar style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="@dimen/progress_bar_height"
+        android:id="@+id/progressBar"
+        android:indeterminate="true"/>
+
+
+    <TextView android:id="@+id/text_from_photo"
+        android:layout_height="@dimen/layout_zero"
+        android:layout_width="match_parent"
+        android:layout_weight="@dimen/layout_07_weight"
+        android:background="@color/detected_text"
+        android:textSize="@dimen/detected_text_font"
+        android:textColor="@color/background"
+        android:textAllCaps="false"
+        android:text="@string/detected_text"/>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/layout_zero"
+        android:layout_weight="@dimen/layout_07_weight"
+        android:padding="@dimen/layout_padding"
+        android:background="@color/background"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_takePhoto"
+            style="@style/my_button"
+            android:layout_width="@dimen/layout_zero"
+            android:layout_weight="@dimen/layout_button_weight"
+            android:layout_marginRight="@dimen/layout_button_padding"
+            android:layout_alignParentLeft="true"
+            android:text="@string/but_takePhoto" />
+
+        <Button
+            android:id="@+id/button_detectText"
+            style="@style/my_button"
+            android:layout_width="@dimen/layout_zero"
+            android:layout_weight="@dimen/layout_button_weight"
+            android:layout_marginLeft="@dimen/layout_button_padding"
+            android:layout_alignParentRight="true"
+            android:text="@string/detected_text"/>
+
+    </LinearLayout>
+
+    <ProgressBar style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="@dimen/progress_bar_height"
+        android:id="@+id/locationProgressBar"
+        android:indeterminate="true"
+        tools:ignore="DuplicateIds" />
+
+
+    <fragment android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:id="@+id/show_current_place"
+                android:layout_height="@dimen/layout_zero"
+                android:layout_width="match_parent"
+                android:layout_weight="@dimen/layout_29_weight" />
+
+                   <LinearLayout
+                       android:layout_width="fill_parent"
+                       android:layout_height="@dimen/layout_zero"
+                       android:layout_weight="@dimen/layout_07_weight"
+                       android:padding="@dimen/layout_padding"
+                       android:background="@color/background"
+                       android:orientation="horizontal">
+
+                       <Button
+                           android:id="@+id/button_detect_place"
+                           style="@style/my_button"
+                           android:layout_width="@dimen/layout_zero"
+                           android:layout_weight="@dimen/layout_50_weight"
+                           android:layout_marginRight="@dimen/layout_button_padding"
+                           android:layout_alignParentLeft="true"
+                           android:text="@string/but_getLocatin"/>
+
+                       <Button
+                           android:id="@+id/button_save"
+                           style="@style/my_button"
+                           android:layout_width="@dimen/layout_zero"
+                           android:layout_weight="@dimen/layout_50_weight"
+                           android:layout_marginLeft="@dimen/layout_button_padding"
+                           android:layout_alignParentRight="true"
+                           android:text="@string/but_save"/>
+
+                    </LinearLayout>
+
+ </LinearLayout>
